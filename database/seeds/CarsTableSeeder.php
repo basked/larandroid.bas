@@ -3,7 +3,7 @@
 use App\Car;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class CarsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

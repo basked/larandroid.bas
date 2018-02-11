@@ -11,7 +11,7 @@ class TraitMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'make:trait';    /**
+    protected $name = 'make:trait';    /**  */
 
     /**
      * The console command description.

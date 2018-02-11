@@ -10,7 +10,22 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/cars', 'CarController@index');
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+// делаем admin panel
+Route::get('/admin', function () {
+    return view('admin.index');
+});
+Route::get('/posts', function () {
+    return view('admin.posts');
+});
+Route::get('/pages', function () {
+    return view('admin.pages');
+});
+Route::get('/users', function () {
+    return view('admin.users');
 });
