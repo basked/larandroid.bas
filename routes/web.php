@@ -29,3 +29,9 @@ Route::get('/pages', function () {
 Route::get('/users', function () {
     return view('admin.users');
 });
+
+// GUZZLE
+Route::get('brandGuzzle', 'BrandController@searchProductsByUrl');
+Route::get('test', 'GuzzleController@test');
+Route::get('parseCandylady', 'GuzzleController@parseCandylady');
+Route::get('parseBelbazar', 'GuzzleController@parseBelbazar');

@@ -6,14 +6,35 @@
     <title>BasAdmin | Dashboard</title>
     <link href="/css/app.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
+    <script src="//cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
 
 </head>
 
 <body>
-<nav class="navbar navbar-expand-md">
-    <a class="navbar-brand" href="#">BasAdmin</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
-            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+<!--
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand"
+       href="#">Navbar</a>
+    <button class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+-->
+
+<nav class="navbar navbar-expand-lg  navbar-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -64,7 +85,9 @@
                         Create Content
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <button class="dropdown-item" type="button">Add page</button>
+                        <button class="dropdown-item" type="button" data-toggle="modal" data-target="#addPage">Add
+                            page
+                        </button>
                         <button class="dropdown-item" type="button">Add post</button>
                         <button class="dropdown-item" type="button">Add user</button>
                     </div>
@@ -181,12 +204,14 @@
                                 <td>Larry</td>
                                 <td>the Bird</td>
                                 <td>@twitter</td>
-                            </tr>                            <tr>
+                            </tr>
+                            <tr>
                                 <th scope="row">4</th>
                                 <td>Larry</td>
                                 <td>the Bird</td>
                                 <td>@twitter</td>
-                            </tr>                            <tr>
+                            </tr>
+                            <tr>
                                 <th scope="row">5</th>
                                 <td>Larry</td>
                                 <td>the Bird</td>
@@ -202,12 +227,51 @@
     </div>
 </section>
 
+<!-- Modal -->
 
-<main role="main" class="container">
+<!-- Add Page -->
 
+<div class="modal fade" id="addPage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form action="#">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addPageLabel">Add Page</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="pageTitle">Page Title</label>
+                        <input type="text" class="form-control" id="pageTitle" placeholder="Page Title">
+                    </div>
+                    <div class="form-group">
+                        <label for="pageBody">Page Body</label>
+                        <textarea type="text"   class="form-control" id="pageBody" placeholder="Page Body"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="metaTags">Meta Tag</label>
+                        <input type="text" class="form-control" id="metaTags" placeholder="Add Some Tags...">
+                    </div>
+                    <div class="form-group">
+                        <label for="metaDecs">Meta Description</label>
+                        <input type="text" class="form-control" id="metaDecs" placeholder="Add Meta Description">
+                    </div>
 
-</main>
-
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="footer">Copyright basked.pro &copy; 2018</div>
+<script>
+    CKEDITOR.replace('pageBody');
+</script>
 <script src="/js/app.js"></script>
 </body>
 </html>
